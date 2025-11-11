@@ -1,0 +1,7 @@
+DETAIL = "detail"
+EMAIL_NOT_FOUND = "Email não localizado"
+INVALID_CREDENCIAL = "Credenciais para acesso inválidas!"
+NOT_TOKEN_REFRESH = "Token para atualização não foi enviado"
+ERROR_TOKEN = "Erro ao invalidar o token"
+KEY_ERROR="ERROR"
+PERMISSION_ERROR="Você não tem permissão para editar este usuário"

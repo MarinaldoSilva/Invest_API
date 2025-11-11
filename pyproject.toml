@@ -1,0 +1,31 @@
+[tool.black]
+line-length = 105 
+target-version = ['py39']
+include = '\.pyi?$'
+exclude = '''
+   /(
+       \.git
+     | \.hg
+     | \.mypy_cache
+     | \.tox
+     | \.venv
+     | venv
+     | _build
+     | buck-out
+     | build
+     | dist
+     | migrations
+   )/
+   '''
+
+  [tool.isort]
+profile = "black"
+line_length = 105
+known_first_party = ["config", "users", "notas", "authentication"]
+skip_glob = ["**/migrations/*.py"]
+
+
+[tool.pytest.ini_options]
+DJANGO_SETTINGS_MODULE = "config.settings"
+python_files = "test_*.py"
+addopts = "--no-header --strict-markers --reuse-db"
