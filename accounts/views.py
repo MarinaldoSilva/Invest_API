@@ -18,6 +18,7 @@ class UserUpdateAPIView(APIView):
     permission_classes = [IsAuthenticated]
 
     def patch(self, request:Request) -> Response:
+        
         #queryset = get_object_or_404(User, pk=pk)
         
         #if request.user != queryset:
