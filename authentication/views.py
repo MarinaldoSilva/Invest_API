@@ -9,7 +9,6 @@ from rest_framework_simplejwt.tokens import RefreshToken, TokenError
 
 from .utils import (
     DETAIL, 
-    EMAIL_NOT_FOUND, 
     INVALID_CREDENCIAL,
     NOT_TOKEN_REFRESH, 
     ERROR_TOKEN
@@ -26,9 +25,7 @@ class SingupView(APIView):
         serializer = UserSerializer(data=request.data)
         serializer.is_valid(raise_exception=True)
         user = serializer.save()
-
         
-
         return Response(
             {"username": user.username,"email": user.email}
         )
